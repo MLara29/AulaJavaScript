@@ -9,8 +9,10 @@ var ano = 2024;
 
 var anoNascimento;
 
+var texto = "Você Nasceu em ";
+
 anoNascimento = (parseInt(idade) - ano)+1;
 
-alert("Você Nasceu em " + anoNascimento);
+alert(texto + anoNascimento);
 
-console.log("Você Nasceu em " + anoNascimento);
+console.log(texto + anoNascimento);
