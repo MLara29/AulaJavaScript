@@ -1,18 +1,53 @@
 
 
 
-var idade = prompt("Digite sua Idade");
+
+class carro{
+  constructor(marca, modelo, ano, cor) {
+    
+    this.marca = marca,
+    this.modelo = modelo,
+    this.ano = ano,
+    this.cor = cor
+
+  }
+
+} 
+    
 
 
 
-var ano = 2024;
+const Carros = []
 
-var anoNascimento;
+Carros.push(new carro("Audi", "A1", 2017, "Preta"))
 
-var texto = "Você Nasceu em ";
+Carros.push(new carro("GM", "CRUZE", 2019, "Branco"))
 
-anoNascimento = (parseInt(idade) - ano)+1;
+Carros.push(new carro("Honda", "CIVIC", 2019, "Branco"))
 
-alert(texto + anoNascimento);
+Carros.push(new carro("Honda", "FIT", 2020, "Vermelho"))
 
-console.log(texto + anoNascimento);
+Carros.push(new carro("Fiat", "Fiat 500", 2022, "Azul"))
+
+
+const Veiculo = prompt("Qual Veiculo você Procura ?" );
+
+for (const item of Carros )
+{
+    
+
+    if(item.marca === Veiculo || item.modelo === Veiculo  )
+    {
+        alert("Seua Carro foi encontardo !!")
+        console.log(item)
+        
+    }
+    if(item.marca !== Veiculo || item.modelo !== Veiculo  )
+    {
+        alert("Seua Carro nâo foi encontardo !!")
+    }
+    
+}
+
+
+
