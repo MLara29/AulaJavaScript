@@ -1,6 +1,7 @@
 
 let flag = false;
-
+const container = document.getElementById('carro')
+const container1 = document.getElementById('carro1')
 
 class carro{
   constructor(marca, modelo, ano, cor) {
@@ -39,9 +40,20 @@ if(Pergunta === "Comprar" ){
 
   for(let i = 0; i <= Carros.length; i++){
 
+    let elemento = document.createElement('div')
+
     if(Carros[i].marca === Veiculo){
       alert("Seu Carro Foi Encontrado!!") 
+
       flag = true;
+
+      elemento.innerHTML = `
+    <p id="texto"> Carro Encontrado sucesso!!</p>   
+    <p id="carro"> <b>Marca:</b> ${Carros[i].marca}</p>
+    <p id="carro"> <b>Modelo:</b> ${Carros[i].modelo}</p>
+    <p id="carro"> <b>Ano:</b> ${Carros[i].ano}</p>
+    <p id="carro"> <b>Cor:</b> ${Carros[i].cor}</p>`
+     container.append(elemento);
       console.log(Carros[i].marca);
     } 
     
@@ -76,34 +88,27 @@ else if (Pergunta === "Vender"){
 
 
   for(let i = 0; i <= Carros.length; i++){
+    
+    let elemento = document.createElement('div')
 
     if(Carros[i].marca === VeiculoVendaMarca){
       
-      
+      elemento.innerHTML = `
+    <p id="texto"> Carro Adicionado com sucesso!!</p>  
+    <p id="carro"> <b>Marca:</b> ${Carros[i].marca}</p>
+    <p id="carro"> <b>Modelo:</b> ${Carros[i].modelo}</p>
+    <p id="carro"> <b>Ano:</b> ${Carros[i].ano}</p>
+    <p id="carro"> <b>Cor:</b> ${Carros[i].cor}</p>`
+     container.append(elemento);
       console.log(Carros[i].marca);
     } 
     
-    let elemento = document.createElement('div')
-
-    elemento.innerHTML = `
-    <p id="carro"> <b>Marca:</b> ${Carros[i].marca}</p>
     
-     `
- 
+
+    
   }
            
-function exibeDados(dados) 
-{
-    let elemento = document.createElement('div')
 
-    elemento.innerHTML = `
-    <p id="carro"> <b>Marca:</b> ${Carros.length.marca}</p>
-    <p id="carro"> <b>Modelo:</b> ${''}</p>
-    <p id="carro"> <b>Ano:</b> ${''}</p>
-    <p id="carro"> <b>Cor:</b> ${''}</p>
-     `
-    
-}
  
 }
   
