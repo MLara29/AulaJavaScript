@@ -72,12 +72,49 @@ else if (Pergunta === "Vender"){
 
   alert("Obrigado seu Carro Foi Adicionado ao Banco de Dados e Quando aparecer alguma proposta você sera Avisado !!")
   console.log(Carros);
+   
+
+
+  for(let i = 0; i <= Carros.length; i++){
+
+    if(Carros[i].marca === VeiculoVendaMarca){
+      
+      
+      console.log(Carros[i].marca);
+    } 
+    
+    let elemento = document.createElement('div')
+
+    elemento.innerHTML = `
+    <p id="carro"> <b>Marca:</b> ${Carros[i].marca}</p>
+    
+     `
+ 
+  }
+           
+function exibeDados(dados) 
+{
+    let elemento = document.createElement('div')
+
+    elemento.innerHTML = `
+    <p id="carro"> <b>Marca:</b> ${Carros.length.marca}</p>
+    <p id="carro"> <b>Modelo:</b> ${''}</p>
+    <p id="carro"> <b>Ano:</b> ${''}</p>
+    <p id="carro"> <b>Cor:</b> ${''}</p>
+     `
+    
+}
+ 
 }
   
 
    
 
-  
+
+
+
+
+
 
 
   
