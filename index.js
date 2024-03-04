@@ -30,7 +30,7 @@ Carros.push(new carro("Volkswagem", "Golf", 2020, "Vermelho"))
 Carros.push(new carro("Fiat", "Fiat 500", 2022, "Azul"))
 
 
-const Pergunta = prompt("Digite o que você quer Fazer, Comprar ou Vender Seu Veiculo ?")
+const Pergunta = prompt("Digite o que você quer Fazer, Comprar ou Vender ?")
 
 if(Pergunta === "Comprar" ){
 
