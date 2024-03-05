@@ -13,6 +13,17 @@ class carro{
 
   }
 
+  MostrarCarro(){
+    let elemento = document.createElement('div')
+    elemento.innerHTML =`
+      <p id="texto"> Carro Encontrado sucesso!!</p>   
+      <p id="carro"> <b>Marca:</b> ${this.marca}</p>
+      <p id="carro"> <b>Modelo:</b> ${this.modelo}</p>
+      <p id="carro"> <b>Ano:</b> ${this.ano}</p>
+      <p id="carro"> <b>Cor:</b> ${this.cor}</p>`
+      container.append(elemento)
+  }
+
 } 
     
 
@@ -47,14 +58,8 @@ if(Pergunta === "Comprar" ){
 
       flag = true;
 
-      elemento.innerHTML = `
-    <p id="texto"> Carro Encontrado sucesso!!</p>   
-    <p id="carro"> <b>Marca:</b> ${Carros[i].marca}</p>
-    <p id="carro"> <b>Modelo:</b> ${Carros[i].modelo}</p>
-    <p id="carro"> <b>Ano:</b> ${Carros[i].ano}</p>
-    <p id="carro"> <b>Cor:</b> ${Carros[i].cor}</p>`
-     container.append(elemento);
-      console.log(Carros[i].marca);
+     
+      Carros[i].MostrarCarro();
     } 
     
     if((i == (Carros.length-1))  &&  Carros[i].marca !== Veiculo && flag == false){
@@ -94,13 +99,16 @@ else if (Pergunta === "Vender"){
     if(Carros[i].marca === VeiculoVendaMarca){
       
       elemento.innerHTML = `
-    <p id="texto"> Carro Adicionado com sucesso!!</p>  
-    <p id="carro"> <b>Marca:</b> ${Carros[i].marca}</p>
+    <p id="texto"> Carro Adicionado com sucesso!!</p> `
+    container.append(elemento);
+    /*<p id="carro"> <b>Marca:</b> ${Carros[i].marca}</p>
     <p id="carro"> <b>Modelo:</b> ${Carros[i].modelo}</p>
     <p id="carro"> <b>Ano:</b> ${Carros[i].ano}</p>
     <p id="carro"> <b>Cor:</b> ${Carros[i].cor}</p>`
      container.append(elemento);
-      console.log(Carros[i].marca);
+      console.log(Carros[i].marca); */
+
+      Carros[i].MostrarCarro();
     } 
     
     
